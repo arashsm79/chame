@@ -9,10 +9,15 @@ The networking is done using Java's NIO package. Everything is handled asynchron
 
 For the database I chose sqlite(even though it's not really suitable for chat servers). I tried to come up with a decent and thought through schema (through research) the schema is shown below.
 
+ ![Alt text](/screenshots/db-schema.png?raw=true "Database Schema")
+
+
 Tic Tac Toe can be played againts AI(minimax) and played with others.
+Snakes and ladders is only offline and under development.
 
 -Each room has it's own game lobbies.
 -Contacts System (friend request/accept)
+-Chats and group chats
 
 
 
