@@ -1,0 +1,48 @@
+#die-roll{
+    -fx-image: url('../icons/dice/die_rotating.gif');
+}
+#die1 {
+    -fx-image: url('../icons/dice/die1.png');
+}
+#die2 {
+    -fx-image: url('../icons/dice/die2.png');
+}
+#die3 {
+    -fx-image: url('../icons/dice/die3.png');
+}
+#die4 {
+    -fx-image: url('../icons/dice/die4.png');
+}
+#die5 {
+    -fx-image: url('../icons/dice/die5.png');
+}
+#die6 {
+    -fx-image: url('../icons/dice/die6.png');
+}
+
+.piece{
+    -fx-background-position: center;
+    -fx-background-size: stretch;
+    -fx-background-repeat: no-repeat;
+    -fx-background-color: transparent;
+}
+#blue-piece {
+    -fx-background-image: url('../icons/pieces/blue_piece.png');
+}
+#red-piece {
+    -fx-background-image: url('../icons/pieces/red_piece.png');
+}
+#yellow-piece {
+    -fx-background-image: url('../icons/pieces/yellow_piece.png');
+}
+#green-piece {
+    -fx-background-image: url('../icons/pieces/green_piece.png');
+}
+
+#sl-board-background{
+    -fx-background-image: url('../icons/snakesandladders/snakesandladders-background.jpg');
+}
+
+#sl-board{
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.9), 100, 0.4, 0, 0);
+}

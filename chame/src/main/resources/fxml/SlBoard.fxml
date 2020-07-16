@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="900.0" stylesheets="@../styles/snakesandladders.css" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.games.snakesandladders.SnakesAndLadders">
+   <children>
+      <HBox id="sl-board-background" prefHeight="100.0" prefWidth="200.0" styleClass="pane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+          <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="675.0" prefWidth="675.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="675.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-1.0">
+                     <children>
+                        <ImageView id="sl-board" fitHeight="600.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true" StackPane.alignment="CENTER">
+                           <image>
+                              <Image url="@../icons/snakesandladders/sl-board.png" />
+                           </image>
+                        </ImageView>
+                        <GridPane fx:id="slBoard_gridPane" gridLinesVisible="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" StackPane.alignment="CENTER">
+                        </GridPane>
+                     </children>
+                  </StackPane>
+               </children>
+            </AnchorPane>
+          <AnchorPane HBox.hgrow="ALWAYS">
+               <children>
+                  <VBox alignment="TOP_CENTER" styleClass="inner_box" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+                     <children>
+                        <Label fx:id="turn_label" alignment="CENTER" contentDisplay="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="100.0" styleClass="piece" text="Turn" textFill="WHITE">
+                           <VBox.margin>
+                              <Insets bottom="60.0" top="20.0" />
+                           </VBox.margin>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font></Label>
+                        <ImageView fx:id="die_imageView" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                           <VBox.margin>
+                              <Insets bottom="50.0" />
+                           </VBox.margin></ImageView>
+                        <Button fx:id="roll_button" mnemonicParsing="false" onAction="#rollButtonOnAction" text="ROLL">
+                           <VBox.margin>
+                              <Insets bottom="20.0" />
+                           </VBox.margin></Button>
+                        <GridPane fx:id="outsidePieces_gridPane" alignment="CENTER" minHeight="200.0" minWidth="200.0">
+                        </GridPane>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

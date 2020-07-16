@@ -1,0 +1,31 @@
+.gridpane {
+    -fx-background-color: #82aad4;
+}
+.game {
+    -fx-background-color: #82aad4;
+    -fx-background-position: center;
+    -fx-background-size: stretch;
+    -fx-background-repeat: no-repeat;
+    -fx-alignment: bottom-center;
+    -fx-font-family: 'cursive';
+    -fx-font-size: 20 em;
+    -fx-font-weight: bolder;
+    -fx-wrap-text: true;
+    -fx-text-fill: rgb(0, 0, 0);
+
+}
+
+.game:hover {
+    -fx-blend-mode: hard-light;
+}
+
+#tictactoe {
+    -fx-background-image: url('../icons/tictactoe.png');
+    -fx-text-fill: rgb(255, 255, 255);
+
+
+}
+
+#snakesandladders {
+    -fx-background-image: url('../icons/snakesandladders.png');
+}

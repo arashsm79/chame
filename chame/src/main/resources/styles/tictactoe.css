@@ -1,0 +1,18 @@
+.tic_gridPane{
+}
+
+.tic_button{
+    -fx-font-size: 6em;
+    -fx-font-weight: bold;
+    -fx-opacity: 1;
+    -fx-focus-color: transparent;
+    -fx-background-insets: 0, 0, 1, 2;
+}
+
+#x{
+    -fx-text-fill: #3421c2;
+}
+
+#o{
+    -fx-text-fill: #64d8cb;
+}

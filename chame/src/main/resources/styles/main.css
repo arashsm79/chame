@@ -1,0 +1,193 @@
+/*
+ * This is an adjustment of the original modena.css for a consistent dark theme.
+ * Original modena.css here: https://gist.github.com/maxd/63691840fc372f22f470.
+ */
+
+/* Redefine base colors */
+.root {
+    -primary-color: #26a69a;
+    -primary-color-dark: #00766c;
+    -primary-color-light: #64d8cb;
+
+    -secondary-color: #d81b60;
+    -secondary-color-dark: #a00037;
+    -secondary-color-light: #ff5c8d;
+
+    -fx-base: #e6e6e6;
+    -fx-background: #e6e6e6;
+
+    /* make controls (buttons, thumb, etc.) slightly lighter */
+    -fx-color: derive(-fx-base, 10%);
+
+    /* text fields and table rows background */
+    -fx-control-inner-background: #ffffff;
+    /* version of -fx-control-inner-background for alternative rows */
+    -fx-control-inner-background-alt: derive(-fx-control-inner-background, 2.5%);
+
+    /* text colors depending on background's brightness */
+    -fx-light-text-color: rgb(220, 220, 220);
+    -fx-mid-text-color: rgb(20, 20, 20);
+    -fx-dark-text-color: rgb(20, 20, 20);
+
+    /* A bright blue for highlighting/accenting objects.  For example: selected
+     * text; selected items in menus, lists, trees, and tables; progress bars */
+    -fx-accent: -secondary-color;
+
+    /* color of non-focused yet selected elements */
+    -fx-selection-bar-non-focused: #bc0058;
+
+    -fx-focus-color : transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+/* Button Design */
+.button{
+    -fx-background-color: derive(-secondary-color, 10%);
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 5, 0, 0, 0);
+    -fx-background-radius: 0;
+    -fx-alignment: CENTER;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 12px;
+    -fx-font-family: "Arial";
+    -fx-font-weight: 700;
+}
+
+.button:focused{
+    -fx-background-color: derive(-secondary-color, 20%);
+    -fx-background-insets: -0.2, 1, 2, -1.4, 2.6;
+    -fx-background-radius: 3, 2, 1, 4, 1;
+}
+.button:hover{
+    -fx-background-color: derive(-secondary-color, 50%);
+}
+.button:pressed{
+    -fx-background-color: derive(-secondary-color, 80%);
+}
+
+.vector-button {
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+    -fx-background-radius: 0;
+    -fx-background-color: transparent;
+}
+.vector-button:hover {
+    -fx-opacity: 0.6;
+}
+.vector-button:pressed {
+    -fx-blend-mode: overlay;
+}
+
+.menu-bar{
+    -fx-background-color: -primary-color-dark;
+}
+
+.split-pane .split-pane-divider{
+    -fx-background-color: derive(-fx-background, 10%);
+
+}
+
+.titled-pane .title{
+    -fx-background-color: derive(-fx-base, 80%);
+}
+
+.tab-pane .tab-header-area .tab-header-background {
+    -fx-background-color: -primary-color;
+}
+
+.tab-pane {
+    -fx-tab-min-width:120px;
+}
+
+
+.tab{
+    -fx-background-insets: 0 1 0 1,0,0;
+    -fx-alignment: CENTER;
+}
+
+.tab-pane .tab {
+    -fx-background-color: -primary-color-light;
+}
+
+.tab-pane .tab:selected {
+    -fx-background-color: -secondary-color-dark;
+}
+
+.tab .tab-label {
+    -fx-alignment: CENTER;
+    -fx-text-fill: #000000;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+.tab:selected .tab-label {
+    -fx-alignment: CENTER;
+    -fx-text-fill: #ffffff;
+}
+
+.list-view .list-cell:selected .label {
+    -fx-text-fill: white;
+}
+#otherschat {
+    -fx-background-position: left;
+    -fx-alignment: center-left;
+    -fx-background-size: stretch;
+    -fx-background-repeat: no-repeat;
+    -fx-background-image: url('../icons/other_chat_bubble.png');
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 5, 0, 0, 3);
+}
+
+#clientchat{
+    -fx-background-position: right;
+    -fx-alignment: center-right;
+    -fx-background-size: stretch;
+    -fx-background-repeat: no-repeat;
+    -fx-background-image: url('../icons/client_chat_bubble.png');
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 5, 0, 0, 3);
+}
+
+.pane{
+    -fx-background-position: center;
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+
+}
+
+.inner_box{
+    -fx-background-position: center;
+    -fx-background-size: stretch;
+    -fx-background-repeat: no-repeat;
+    -fx-background-color: #ffffff;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 30, 0, 0, 0);
+}
+
+#game-pane{
+    -fx-background-image: url('../icons/game_background.jpg');
+
+}
+
+
+/* Fix derived prompt color for text fields */
+.text-input {
+    -fx-prompt-text-fill: #226622;
+}
+
+/* Keep prompt invisible when focused (above color fix overrides it) */
+.text-input:focused {
+    -fx-prompt-text-fill: transparent;
+}
+
+/* Fix scroll bar buttons arrows colors */
+.scroll-bar > .increment-button > .increment-arrow,
+.scroll-bar > .decrement-button > .decrement-arrow {
+    -fx-background-color: -fx-mark-highlight-color, rgb(220, 220, 220);
+}
+
+.scroll-bar > .increment-button:hover > .increment-arrow,
+.scroll-bar > .decrement-button:hover > .decrement-arrow {
+    -fx-background-color: -fx-mark-highlight-color, rgb(240, 240, 240);
+}
+
+.scroll-bar > .increment-button:pressed > .increment-arrow,
+.scroll-bar > .decrement-button:pressed > .decrement-arrow {
+    -fx-background-color: -fx-mark-highlight-color, rgb(255, 255, 255);
+}

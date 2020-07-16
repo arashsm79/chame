@@ -1,0 +1,30 @@
+.pane{
+    -fx-background-position: center;
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+
+}
+.inner_box{
+    -fx-background-position: center;
+    -fx-background-size: stretch;
+    -fx-background-repeat: no-repeat;
+    -fx-background-color: #ffffff;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 30, 0, 0, 0);
+}
+#preview_pane{
+    -fx-background-image: url('../icons/contactpreview_background.jpg');
+}
+
+.vector-button {
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+    -fx-background-radius: 0;
+    -fx-background-color: transparent;
+}
+.vector-button:hover {
+    -fx-opacity: 0.6;
+}
+.vector-button:pressed {
+    -fx-blend-mode: overlay;
+}
+

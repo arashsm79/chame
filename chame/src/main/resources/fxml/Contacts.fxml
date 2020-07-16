@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane minHeight="540.0" minWidth="800.0" stylesheets="@../styles/contacttab.css" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.mainview.Contact.ContactsTabController">
+   <children>
+      <SplitPane dividerPositions="0.3" layoutX="212.0" layoutY="128.0" prefHeight="160.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <HBox>
+                           <children>
+                              <TextField fx:id="search_textField" prefHeight="30.0" promptText="Search with username" HBox.hgrow="ALWAYS" />
+                              <Button fx:id="addContact_button" alignment="CENTER" mnemonicParsing="false" onAction="#addContactButtonOnAction" prefHeight="30.0" text="Add" textAlignment="CENTER" HBox.hgrow="ALWAYS" />
+                           </children>
+                        </HBox>
+                        <ListView fx:id="contacts_listView" stylesheets="@../styles/fancylistview.css" VBox.vgrow="ALWAYS">
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </ListView>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+          <AnchorPane id="preview_pane" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" styleClass="pane">
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label fx:id="profileUsername_label" text="Username">
+                                 <font>
+                                    <Font size="29.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets right="20.0" />
+                                 </padding>
+                                 <HBox.margin>
+                                    <Insets left="45.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Button fx:id="createGroup_button" mnemonicParsing="false" onAction="#createGroupButtonOnAction" prefWidth="110.0" text="Create Group" />
+                              <Button fx:id="joinGroup_button" layoutX="224.0" layoutY="47.0" mnemonicParsing="false" onAction="#joinGroupButtonOnAction" prefWidth="90.0" text="Join Group">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button fx:id="stats_button" layoutX="340.0" layoutY="47.0" mnemonicParsing="false" onAction="#statsButtonOnAction" prefWidth="90.0" text="Stats">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" styleClass="inner_box">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <ImageView fx:id="contactPreviewAvatar_imageView" fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true" />
+                                    <Label fx:id="contactPreviewUsername_label" text="Username">
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                     <Circle fx:id="contactPreviewOnline_circle" fill="#0bc402" radius="8.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </Circle>
+                                    <Label fx:id="contactPreviewStatus_label" text="Status">
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <Button fx:id="contactPreviewChat_button" mnemonicParsing="false" onAction="#contactPreviewChatButtonOnAction" text="Start Chat" />
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Button fx:id="contactPreviewAccept_button" mnemonicParsing="false" onAction="#contactPreviewAcceptButtonOnAction" styleClass="vector-button">
+                                       <graphic>
+                                          <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../icons/accept.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="contactPreviewDeny_button" mnemonicParsing="false" onAction="#contactPreviewDenyButtonOnAction" styleClass="vector-button">
+                                       <graphic>
+                                          <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../icons/deny.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                           </children>
+                           <VBox.margin>
+                              <Insets left="50.0" right="50.0" top="80.0" />
+                           </VBox.margin>
+                        </VBox>
+                     </children>
+                  </VBox>
+               </children></AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

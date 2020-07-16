@@ -1,0 +1,12 @@
+.list-view .list-cell {
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 5, 0, 0, 0);
+    -fx-background-radius: 5px;
+    -fx-background-insets: 5px;
+}
+.list-view .list-cell:empty {
+    -fx-background-color: transparent;
+    -fx-effect: null;
+}
+.list-view .list-cell:selected .label {
+    -fx-text-fill: white;
+}
