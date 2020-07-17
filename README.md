@@ -13,10 +13,13 @@ For the database I chose sqlite(even though it's not really suitable for chat se
 
 
 Tic Tac Toe can be played againts AI(minimax) and played with others.
+
 Snakes and ladders is only offline and under development.
 
 -Each room has it's own game lobbies.
+
 -Contacts System (friend request/accept)
+
 -Chats and group chats
 
 
@@ -36,7 +39,6 @@ Screenshots:
  ![Alt text](/screenshots/1.png?raw=true "Chat")
  ![Alt text](/screenshots/2.png?raw=true "Contacts")
  ![Alt text](/screenshots/3.png?raw=true "Games")
- ![Alt text](/screenshots/4.png?raw=true "Create game lobby")
  ![Alt text](/screenshots/5.png?raw=true "Tic Tac Toe")
  ![Alt text](/screenshots/1.png?raw=true "Chat Game Lobby")
  
