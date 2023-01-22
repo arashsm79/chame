@@ -16,22 +16,22 @@ Tic Tac Toe can be played againts AI(minimax) and played with others.
 
 Snakes and ladders is only offline and under development.
 
--Each room has it's own game lobbies.
+- Each room has it's own game lobbies.
 
--Contacts System (friend request/accept)
+- Contacts System (friend request/accept)
 
--Chats and group chats
+- Chats and group chats
 
 
 
 
 Dependencies:
 
--HikariCP
+- HikariCP
 
--Gson
+- Gson
 
--xerial / sqlite-jdbc 
+- xerial / sqlite-jdbc 
 
 
 
